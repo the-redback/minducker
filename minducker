@@ -1,0 +1,5 @@
+#!/bin/bash
+set -eou pipefail
+
+docker images ${1}
+docker save ${1} | pv | (eval $(minikube docker-env) && docker load)
