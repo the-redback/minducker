@@ -1,6 +1,6 @@
 # MinDucker
 
-MinDucker (or, `Minikube Docker Sucker` :p) is a teeny-tiny script that carries over docker images from host machine to Minikube.
+MinDucker (or, _`Minikube Docker Sucker`_ :p) is a teeny-tiny script that carries over docker images from host machine to Minikube.
 
 ## Usage
 
