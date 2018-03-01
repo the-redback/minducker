@@ -1,22 +1,38 @@
 # MinDucker
 
-- Carry over docker images from Local Machine to Minikube
-- Removes extra dangling images created by old images
+MinDucker (or, `Minikube Sucker` :p) is a teeny-tiny script that carries over docker images from host machine to Minikube.
 
+This script does the following:
+
+- Carries over docker images from host machine to Minikube.
+- Removes dangling images created by new image.
+
+## Set Me UP!
+
+Move Script in to your path
+
+```console
+$ curl -LO https://raw.githubusercontent.com/the-redback/min-ducker/master/minducker \
+  && chmod +x ./minducker \
+  && sudo mv ./minducker /usr/local/bin/minducker
 ```
+
+## Usage
+
+```console
 $ minducker <imagename>
 ```
 
-## Sample Output
+## Script in Action!
 
 ```console
-$ minducker maruftuhin/apiserver
-REPOSITORY             TAG                 IMAGE ID            CREATED             SIZE
-maruftuhin/apiserver   rbac-doc            f48716892153        2 minutes ago       69.6MB
-c8307148bbf4: Loading layer [==================================================>]  63.68MB/63.68MB
-The image maruftuhin/apiserver:rbac-doc already exists, renaming the old one with ID sha256:851781e3f50c89843c78c851939f12eca60a23c9f843bfed265d5c1407a62bf1 to empty string
-Loaded image: maruftuhin/apiserver:rbac-doc
-Removing dangling images
-Deleted: sha256:851781e3f50c89843c78c851939f12eca60a23c9f843bfed265d5c1407a62bf1
-Deleted: sha256:7952556923b02e2bbb2f8e9e8c7879539396ad71a6ba48ba1f9b40eeb19e0d50
+$ minducker the-redback/apiserver
+REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
+the-redback/apiserver   0.0.1               c54e42630fc5        9 days ago          69.6 MB
+cd7100a72410: Loading layer 4.403 MB/4.403 MB
+11e956666842: Loading layer 2.058 MB/2.058 MB
+b9b8fcbaedcd: Loading layer 63.68 MB/63.68 MB
+Loaded image: the-redback/apiserver:0.0.1
 ```
+
+## Happy Coding! B|
