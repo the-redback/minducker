@@ -1,15 +1,18 @@
 # MinDucker
 
-MinDucker (or, `Minikube Sucker` :p) is a teeny-tiny script that carries over docker images from host machine to Minikube.
+MinDucker (or, `Minikube Docker Sucker` :p) is a teeny-tiny script that carries over docker images from host machine to Minikube.
+
+## Usage
 
 This script does the following:
 
-- Carries over docker images from host machine to Minikube.
+- Carries over docker images from host machine to Minikube
+- Useful for private images. No hassels of creating `ImagePullSecret`.
 - Removes dangling images created by new image.
 
 ## Set Me UP!
 
-Move Script in to your path
+Move this Script in to your path
 
 ```console
 $ curl -LO https://raw.githubusercontent.com/the-redback/min-ducker/master/minducker \
@@ -17,13 +20,11 @@ $ curl -LO https://raw.githubusercontent.com/the-redback/min-ducker/master/mindu
   && sudo mv ./minducker /usr/local/bin/minducker
 ```
 
-## Usage
+## Script in Action!
 
 ```console
-$ minducker <imagename>
+$ minducker <image-name>
 ```
-
-## Script in Action!
 
 ```console
 $ minducker the-redback/apiserver
