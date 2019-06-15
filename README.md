@@ -21,7 +21,7 @@ $ minducker <image-name>
 Move this Script in to your path
 
 ```console
-$ curl -LO https://raw.githubusercontent.com/the-redback/min-ducker/master/minducker \
+curl -LO https://github.com/the-redback/min-ducker/raw/master/minducker \
   && chmod +x ./minducker \
   && sudo mv ./minducker /usr/local/bin/minducker
 ```
